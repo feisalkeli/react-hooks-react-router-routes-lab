@@ -9,10 +9,10 @@ function Actors() {
       {act.map((acting) => {
         return (
           <ul key={acting.id}>
-            <Link to="/actors">
-              {" "}
-              <li>{acting}</li>
-            </Link>
+            <li>
+              <Link to="/actors"> </Link>
+              {acting}
+            </li>
           </ul>
         );
       })}

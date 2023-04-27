@@ -12,10 +12,16 @@ import Directors from "./Directors";
 import Movies from "./Movies";
 
 const router = CreateBrowserRouter([
-  { path: "/", element: <Home /> },
-  { path: "/movies", element: <Movies /> },
-  { path: "/directors", element: <Directors /> },
-  { path: "/actors", element: <Actors /> },
+  {
+    path: "/",
+    element: <NavBar />,
+    children: [
+      { path: "/", element: <Home /> },
+      { path: "/movies", element: <Movies /> },
+      { path: "/directors", element: <Directors /> },
+      { path: "/actors", element: <Actors /> },
+    ],
+  },
 ]);
 function App() {
   return (
